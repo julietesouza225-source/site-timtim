@@ -1,3 +1,4 @@
+
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -34,8 +35,8 @@ export default function Header() {
               fontSize: '1.5rem',
               fontWeight: 'bold'
             }}>
-              <span style={{ color: '#1D5B4F' }}>Tim Tim</span>
-              <span style={{ color: '#FF6E3C' }}> Costa Verde</span>
+              <span style={{ color: '#065F46' }}>Tim Tim</span>
+              <span style={{ color: '#0284C7' }}> Costa Verde</span>
             </div>
           </Link>
 

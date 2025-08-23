@@ -8,8 +8,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 font-['Pacifico']">
-              Tim Tim Costa Verde 🍹
+            <h3 className="text-2xl font-bold mb-4 font-[\'Pacifico\']">
+              <span style={{ color: '#10B981' }}>Tim Tim</span>
+              <span style={{ color: '#3B82F6' }}> Costa Verde</span> 🍹
             </h3>
             <p className="text-orange-50/80 text-sm leading-relaxed">
               O canal que não passa pano — SÓ FOFOCA 🍹<br/>
@@ -38,17 +39,21 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-teal-700 rounded-full hover:bg-pink-500 transition-colors">
+              <a 
+                href="https://www.instagram.com/timtimcostaverde" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-teal-700 rounded-full hover:bg-pink-500 transition-colors"
+              >
                 <i className="ri-instagram-fill text-lg"></i>
               </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-teal-700 rounded-full hover:bg-pink-500 transition-colors">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61578676171822" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-teal-700 rounded-full hover:bg-pink-500 transition-colors"
+              >
                 <i className="ri-facebook-fill text-lg"></i>
-              </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-teal-700 rounded-full hover:bg-pink-500 transition-colors">
-                <i className="ri-whatsapp-fill text-lg"></i>
-              </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-teal-700 rounded-full hover:bg-pink-500 transition-colors">
-                <i className="ri-youtube-fill text-lg"></i>
               </a>
             </div>
             <p className="text-xs text-orange-50/60 mt-4">@timtimcostaverde</p>
@@ -57,7 +62,7 @@ export default function Footer() {
 
         <div className="border-t border-orange-50/20 mt-8 pt-8 text-center">
           <p className="text-sm text-orange-50/60">
-            © 2024 Tim Tim Costa Verde. Todas as fofocas reservadas! 😄
+            2024 Tim Tim Costa Verde. Todas as fofocas reservadas! 😄
           </p>
         </div>
       </div>

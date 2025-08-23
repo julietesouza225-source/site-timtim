@@ -21,11 +21,10 @@ export default function ContatoPage() {
     setErrorMessage('');
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/contact-form`, {
+      const response = await fetch('https://kdismzegwnxdmoysixcr.supabase.co/functions/v1/contact-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}`,
         },
         body: JSON.stringify(formData),
       });
@@ -63,7 +62,7 @@ export default function ContatoPage() {
         <section className="py-16 bg-gradient-to-br from-[#007487] to-[#1D5B4F]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Fale com a Tia! 💬
+              Fale com a Tia! 
             </h1>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Tem alguma fofoca pra contar? Quer sugerir um assunto? Entre em contato!
@@ -117,11 +116,11 @@ export default function ContatoPage() {
 
                 <div className="mt-8 p-6 bg-[#FFDF5A]/20 rounded-xl">
                   <h3 className="font-bold text-[#1D5B4F] mb-2">
-                    🔥 Dica da Tia:
+                    Dica da Tia:
                   </h3>
                   <p className="text-[#1D5B4F]/70 text-sm">
                     Para mandar fofocas quentes, use o Instagram ou e-mail! 
-                    Resposta garantida em até 24 horas (a não ser que a Tia esteja ocupada com alguma fofoca quente 😴)
+                    Resposta garantida em até 24 horas (a não ser que a Tia esteja ocupada com alguma fofoca quente )
                   </p>
                 </div>
               </div>
@@ -134,7 +133,7 @@ export default function ContatoPage() {
                 {isSubmitted && (
                   <div className="mb-6 p-4 bg-green-100 border border-green-400 rounded-lg">
                     <p className="text-green-700">
-                      ✅ Mensagem enviada! A Tia vai responder em breve!
+                      Mensagem enviada! A Tia vai responder em breve!
                     </p>
                   </div>
                 )}
@@ -142,7 +141,7 @@ export default function ContatoPage() {
                 {errorMessage && (
                   <div className="mb-6 p-4 bg-red-100 border border-red-400 rounded-lg">
                     <p className="text-red-700">
-                      ❌ {errorMessage}
+                      {errorMessage}
                     </p>
                   </div>
                 )}
@@ -196,12 +195,12 @@ export default function ContatoPage() {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6E3C] focus:border-transparent text-sm pr-8 disabled:bg-gray-100"
                     >
                       <option value="">Escolha o assunto</option>
-                      <option value="fofoca">🔥 Tenho uma fofoca!</option>
-                      <option value="sugestao">💡 Sugestão de pauta</option>
-                      <option value="elogio">❤️ Elogio</option>
-                      <option value="critica">💭 Crítica construtiva</option>
-                      <option value="parcerias">🤝 Parcerias</option>
-                      <option value="outros">📝 Outros assuntos</option>
+                      <option value="fofoca"> Tenho uma fofoca!</option>
+                      <option value="sugestao"> Sugestão de pauta</option>
+                      <option value="elogio"> Elogio</option>
+                      <option value="critica"> Crítica construtiva</option>
+                      <option value="parcerias"> Parcerias</option>
+                      <option value="outros"> Outros assuntos</option>
                     </select>
                   </div>
 
@@ -231,7 +230,7 @@ export default function ContatoPage() {
                     disabled={formData.mensagem.length > 500 || isSubmitting}
                     className="w-full bg-[#FF6E3C] text-white py-3 px-6 rounded-lg hover:bg-[#F56E87] transition-colors font-medium disabled:bg-gray-400 disabled:cursor-not-allowed whitespace-nowrap"
                   >
-                    {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'} 📩
+                    {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'} 
                   </button>
                 </form>
               </div>
